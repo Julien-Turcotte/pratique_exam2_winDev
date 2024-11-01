@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Examen2.Models.EvaluationJeu">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAIAAAAAAAAAAAAAAAABAAAAAAEAAAA=</HashCode>
+      <FileName>Models\EvaluationJeu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Examen2.Models.Jeu">
+    <Position X="0.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Jeu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Examen2.ViewModels.JeuViewModel">
+    <Position X="4.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAIEAAAAAAAAACAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ViewModels\JeuViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Examen2.ViewModels.MainViewModelEvaluations">
+    <Position X="6.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAIQAAAAAAAAAAAAgAACAAAAAAAABAEEACAAAAA=</HashCode>
+      <FileName>ViewModels\MainViewModelEvaluations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Examen2.ViewModels.MainViewModelJeux">
+    <Position X="6.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIQAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\MainViewModelJeux.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Examen2.ViewModels.ViewModelBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Examen2.ViewModels.ViewModelValidable" Collapsed="true">
+    <Position X="9" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAADEAAABAAAAAAgAAAAAAAQIAAAAAAABAAA=</HashCode>
+      <FileName>ViewModels\ViewModelValidable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Examen2.Views.Evaluations">
+    <Position X="12.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAACBAAAAAAEAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Views\Evaluations.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Examen2.Views.Jeux">
+    <Position X="12.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Jeux.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Examen2.Models.Plateforme">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Plateforme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Examen2.Data.JeuxDataProvider">
+    <Position X="9.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCEAAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\JeuxDataProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Examen2.ViewModels.EvaluationJeuViewModel">
+    <Position X="4.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAIAAAAAAAAAAAAAAAABCAAAAAEAAAA=</HashCode>
+      <FileName>ViewModels\EvaluationJeuViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Examen2.Data.IJeuxDataProvider" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\IJeuxDataProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

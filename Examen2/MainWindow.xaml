@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Examen2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Examen2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Ma collection de jeux"
+    >
+    <Grid>
+        <NavigationView 
+            x:Name="NavView" 
+            PaneDisplayMode="Top" 
+            IsSettingsVisible="False"
+            AlwaysShowHeader="False"
+            Loaded="NavView_Loaded"
+            SelectionChanged="NavView_SelectionChanged"
+            BackRequested="NavView_BackRequested">
+            
+            <NavigationView.Resources>
+                <Thickness x:Key="NavigationViewHeaderMargin">15 0</Thickness>
+            </NavigationView.Resources>
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="Examen2.Views.Jeux" Content="Jeux"/>
+                <NavigationViewItem Tag="Examen2.Views.Evaluations" Content="Évaluations"/>
+            </NavigationView.MenuItems>
+
+            <ScrollViewer>
+                <Frame x:Name="ContentFrame" NavigationFailed="ContentFrame_NavigationFailed"/>
+            </ScrollViewer>
+        </NavigationView>
+    </Grid>
+</Window>
