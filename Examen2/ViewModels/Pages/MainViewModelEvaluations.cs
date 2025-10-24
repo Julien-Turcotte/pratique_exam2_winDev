@@ -20,18 +20,40 @@ public class MainViewModelEvaluations : ViewModelBase
     /// </summary>
     public ObservableCollection<EvaluationJeuViewModel> Evaluations { get; }
 
+    private EvaluationJeuViewModel _nouvelleEvaluation;
     /// <summary>
     /// La nouvelle évaluation en construction
     /// </summary>
-    public EvaluationJeuViewModel NouvelleEvaluation { get; set; }
+    public EvaluationJeuViewModel NouvelleEvaluation
+    {
+        get {  return _nouvelleEvaluation; }
+        set
+        {
+            if (NouvelleEvaluation != value)
+            {
+                _nouvelleEvaluation = value;
+                RaisePropertyChanged();
+            }
+        }
+    }
 
     public MainViewModelEvaluations(JeuxDataProvider jeuxDataProvider)
     {
         _jeuxDataProvider = jeuxDataProvider;
         Jeux = new List<Jeu>();
         Evaluations = new ObservableCollection<EvaluationJeuViewModel>();
+        _nouvelleEvaluation = new EvaluationJeuViewModel(new EvaluationJeu());
+    }
+
+    /// <summary>
+    /// Permet d'ajouter la nouvelle évaluation à la liste d'évaluations
+    /// </summary>
+    public void AjoutEvaluation()
+    {
+        Evaluations.Add(NouvelleEvaluation);
         NouvelleEvaluation = new EvaluationJeuViewModel(new EvaluationJeu());
     }
+
 
     /// <summary>
     /// L'évaluation sélectionnée
@@ -69,13 +91,5 @@ public class MainViewModelEvaluations : ViewModelBase
         }
     }
 
-    /// <summary>
-    /// Permet d'ajouter la nouvelle évaluation à la liste d'évaluations
-    /// </summary>
-    public void AjoutEvaluation()
-    {
-        Evaluations.Add(NouvelleEvaluation);
-        NouvelleEvaluation = new EvaluationJeuViewModel(new EvaluationJeu());
-        RaisePropertyChanged(nameof(NouvelleEvaluation));
-    }
+
 }
