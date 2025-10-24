@@ -13,7 +13,7 @@
         x:Name="root"
         Margin="15,12,0,0"
         RowSpacing="12">
-        <Grid x:Name="liste">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />

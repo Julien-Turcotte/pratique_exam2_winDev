@@ -29,11 +29,9 @@ public sealed partial class Evaluations : Page
 
     private void VoirFormModifEvaluation(object sender, RoutedEventArgs e)
     {
-        this.modifForm.Visibility = Visibility.Visible;
     }
 
     private void TerminerModif (object sender, RoutedEventArgs e)
     {
-        this.modifForm.Visibility = Visibility.Collapsed;
     }
 }
