@@ -3,7 +3,7 @@ using Examen2.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Examen2.ViewModels;
+namespace Examen2.ViewModels.Pages;
 
 public class MainViewModelJeux : ViewModelBase
 {
@@ -12,7 +12,7 @@ public class MainViewModelJeux : ViewModelBase
 
     public MainViewModelJeux(IJeuxDataProvider jeuxDataProvider)
     {
-        this._jeuxDataProvider = jeuxDataProvider;
+        _jeuxDataProvider = jeuxDataProvider;
         Jeux = new ObservableCollection<JeuViewModel>();
     }
 

@@ -1,5 +1,5 @@
 using Examen2.Data;
-using Examen2.ViewModels;
+using Examen2.ViewModels.Pages;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
