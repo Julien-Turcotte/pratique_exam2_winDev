@@ -23,9 +23,7 @@
         <TextBlock Grid.Row="0" FontSize="24">Évaluations</TextBlock>
 
         <!--  Nouvelle évaluation  -->
-        <Button
-            Grid.Row="1"
-            Content="Ajouter">
+        <Button Grid.Row="1" Content="Ajouter">
             <Button.Flyout>
                 <Flyout x:Name="formAjout">
                     <StackPanel>
@@ -55,7 +53,7 @@
 
         <!--  Liste des évaluations  -->
         <StackPanel Grid.Row="2">
-            <GridView ItemsSource="{x:Bind ViewModel.Evaluations, Mode=OneWay}">
+            <GridView ItemsSource="{x:Bind ViewModel.Evaluations, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.EvaluationSelectionnee, Mode=TwoWay}">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
                         <Setter Property="Margin" Value="7,11" />
@@ -87,15 +85,36 @@
                     </ItemsPanelTemplate>
                 </GridView.ItemsPanel>
             </GridView>
-            <Button Click="VoirFormModifEvaluation" Visibility="{x:Bind ViewModel.EvaluationEstSelectionnee, Mode=OneWay}">Modifier</Button>
+            <Button Click="VoirFormModifEvaluation" Visibility="{x:Bind ViewModel.EvaluationEstSelectionnee, Mode=OneWay}">
+                Modifier
+            </Button>
         </StackPanel>
 
         <!--  Modifier une évaluation  -->
-        <StackPanel Grid.Row="3" Visibility="Collapsed">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="18" Text="Modification " />
-            </StackPanel>
-            <Button Click="TerminerModif" Content="Fermer" />
-        </StackPanel>
+        <Button Content="Modifier" Visibility="{x:Bind ViewModel.EvaluationEstSelectionnee}">
+            <Button.Flyout>
+                <Flyout x:Name="flyoutModification">
+                    <StackPanel MinWidth="400" Spacing="10">
+                        <TextBlock
+                            FontSize="18"
+                            FontWeight="Bold"
+                            Text="{x:Bind ViewModel.EvaluationSelectionnee.Jeu.NomComplet, Mode=OneWay}" />
+                        <RatingControl HorizontalAlignment="Left" Value="{x:Bind ViewModel.EvaluationSelectionnee.Note, Mode=TwoWay}" />
+                        <TextBox
+                            MinWidth="400"
+                            MinHeight="150"
+                            AcceptsReturn="True"
+                            IsSpellCheckEnabled="True"
+                            Text="{x:Bind ViewModel.EvaluationSelectionnee.Description, Mode=TwoWay}"
+                            TextWrapping="Wrap" />
+                        <Button
+                            HorizontalAlignment="Right"
+                            Click="TerminerModif"
+                            Content="Fermer" />
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+
     </Grid>
 </Page>
