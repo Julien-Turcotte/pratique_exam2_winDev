@@ -5,14 +5,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Examen2.ViewModels;
 
-public class EvaluationJeuViewModel : ViewModelValidable
+public class EvaluationJeuViewModel : ViewModelBase
 {
     private EvaluationJeu _evaluation;
 
     public EvaluationJeuViewModel(EvaluationJeu evaluation)
     {
         _evaluation = evaluation;
-        _errors.Add("Description", new ObservableCollection<ValidationResult>());
     }
 
     public Jeu Jeu
@@ -33,7 +32,7 @@ public class EvaluationJeuViewModel : ViewModelValidable
         get => _evaluation.Note;
         set
         {
-            if (_evaluation.Note != value && Validate(value))
+            if (_evaluation.Note != value )
             {
                 _evaluation.Note = value;
                 RaisePropertyChanged();
@@ -47,7 +46,7 @@ public class EvaluationJeuViewModel : ViewModelValidable
         get => _evaluation.Description;
         set
         {
-            if (_evaluation.Description != value && Validate(value))
+            if (_evaluation.Description != value)
             {
                 _evaluation.Description = value;
                 RaisePropertyChanged();

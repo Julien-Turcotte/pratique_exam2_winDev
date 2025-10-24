@@ -4,14 +4,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Examen2.ViewModels;
 
-public class JeuViewModel : ViewModelValidable
+public class JeuViewModel : ViewModelBase
 {
     private Jeu _jeu;
 
     public JeuViewModel(Jeu jeu)
     {
         _jeu = jeu;
-        _errors.Add("Nom", new ObservableCollection<ValidationResult>());
     }
 
     public Jeu Jeu
@@ -24,7 +23,7 @@ public class JeuViewModel : ViewModelValidable
         get => _jeu.Nom;
         set
         {
-            if (_jeu.Nom != value && Validate(value))
+            if (_jeu.Nom != value )
             {
                 _jeu.Nom = value;
                 RaisePropertyChanged();

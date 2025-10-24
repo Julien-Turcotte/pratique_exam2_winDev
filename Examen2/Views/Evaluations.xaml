@@ -48,12 +48,6 @@
                             IsSpellCheckEnabled="True"
                             Text="{x:Bind ViewModel.NouvelleEvaluation.Description, Mode=TwoWay}"
                             TextWrapping="Wrap" />
-                        <!--  Messages d'erreur  -->
-                        <ItemsView Foreground="Coral">
-                            <ItemsView.Resources>
-                                <SolidColorBrush x:Key="ItemContainerPointerOverBackground" Color="Transparent" />
-                            </ItemsView.Resources>
-                        </ItemsView>
                         <Button Click="AjouterEvaluation" Content="Confirmer" />
                     </StackPanel>
                 </Flyout>
