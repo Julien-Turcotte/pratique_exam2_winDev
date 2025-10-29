@@ -31,15 +31,11 @@ public sealed partial class Evaluations : Page
   
     private void VoirFormModifEvaluation(object sender, RoutedEventArgs e)
     {
-        // TODO: Plusieurs options existent. Mais si vous utilisez un
-        //          Button.Flyout voici un indice --> flyoutModification.ShowAt(sender as FrameworkElement);
         flyoutModification.ShowAt(sender as FrameworkElement);
     }
 
     private void TerminerModif(object sender, RoutedEventArgs e)
     {
-        // TODO: Plusieurs options existent. Mais si vous utilisez un
-        //          Button.Flyout voici un indice --> flyoutModification.Hide();
         flyoutModification.Hide();
     }
 }
