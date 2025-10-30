@@ -24,7 +24,18 @@ public class MainViewModelEvaluations : ViewModelBase
     /// <summary>
     /// La nouvelle évaluation en construction
     /// </summary>
-    public EvaluationJeuViewModel NouvelleEvaluation { get; set; }
+    public EvaluationJeuViewModel NouvelleEvaluation
+    { 
+        get { return _nouvelleEvaluation; }
+        set
+        {
+            if (_nouvelleEvaluation != value)
+            {
+                _nouvelleEvaluation = value;
+                RaisePropertyChanged();
+            }
+        }
+    }
 
     public MainViewModelEvaluations(JeuxDataProvider jeuxDataProvider)
     {
@@ -56,6 +67,8 @@ public class MainViewModelEvaluations : ViewModelBase
             {
                 _evaluationSelectionnee = value;
                 RaisePropertyChanged();
+                RaisePropertyChanged(nameof(EvaluationEstSelectionnee));
+
             }
 
         }
