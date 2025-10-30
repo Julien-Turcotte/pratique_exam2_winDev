@@ -15,15 +15,16 @@
             BackRequested="NavView_BackRequested"
             IsSettingsVisible="False"
             Loaded="NavView_Loaded"
-            PaneDisplayMode="Top">
+            PaneDisplayMode="Top"
+            SelectionChanged="NavView_SelectionChanged">
 
             <NavigationView.Resources>
                 <Thickness x:Key="NavigationViewHeaderMargin">15 0</Thickness>
             </NavigationView.Resources>
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Jeux" Tag="Examen2.Views" />
-                <NavigationViewItem Content="Évaluations" Tag="Examen2.Views" />
+                <NavigationViewItem Content="Jeux" Tag="Examen2.Views.Jeux" />
+                <NavigationViewItem Content="Évaluations" Tag="Examen2.Views.Evaluations" />
             </NavigationView.MenuItems>
 
             <ScrollViewer>

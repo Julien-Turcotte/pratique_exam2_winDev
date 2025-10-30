@@ -91,12 +91,30 @@
         </StackPanel>
 
         <!--  Modifier une évaluation  -->
-        <StackPanel Grid.Row="3" Visibility="Collapsed">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="18" Text="Modification " />
-            </StackPanel>
-            <Button Click="TerminerModif" Content="Fermer" />
-        </StackPanel>
+        <Button Content="Modifier" Visibility="{x:Bind ViewModel.EvaluationEstSelectionnee, Mode=OneWay}">
+            <Button.Flyout>
+                <Flyout x:Name="flyoutModification">
+                    <StackPanel MinWidth="400" Spacing="10">
+                        <TextBlock
+                                FontSize="18"
+                                FontWeight="Bold"
+                                Text="{x:Bind ViewModel.EvaluationSelectionnee.Jeu.NomComplet, Mode=OneWay}" />
+                        <RatingControl HorizontalAlignment="Left" Value="{x:Bind ViewModel.EvaluationSelectionnee.Note, Mode=TwoWay}" />
+                        <TextBox
+                                MinWidth="400"
+                                MinHeight="150"
+                                AcceptsReturn="True"
+                                IsSpellCheckEnabled="True"
+                                Text="{x:Bind ViewModel.EvaluationSelectionnee.Description, Mode=TwoWay}"
+                                TextWrapping="Wrap" />
+                        <Button
+                                HorizontalAlignment="Right"
+                                Click="TerminerModif"
+                                Content="Fermer" />
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
 
 
     </Grid>

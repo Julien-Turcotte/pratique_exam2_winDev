@@ -33,10 +33,12 @@ public sealed partial class Evaluations : Page
     {
         // TODO: Plusieurs options existent. Mais si vous utilisez un
         //          Button.Flyout voici un indice --> flyoutModification.ShowAt(sender as FrameworkElement);
+        flyoutModification.ShowAt(sender as FrameworkElement);
+
     }
 
     private void TerminerModif(object sender, RoutedEventArgs e)
     {
-
+        flyoutModification.Hide();
     }
 }
